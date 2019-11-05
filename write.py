@@ -28,7 +28,7 @@ def lambda_handler(event, context):
     #cells[3].value = bodyfat
     cells[4].value = event['calories']
     cells[5].value = event['protein']
-    cells[6].value = event['carbs']
+    cells[6].value = event['carbohydrates']
     cells[7].value = event['fat']
 
     sheet.update_cells(cells)
