@@ -14,3 +14,8 @@ def lambda_handler(event, context):
             FunctionName='savetosheets',
             InvocationType='Event',
             Payload=json.dumps(data.totals))
+
+    return {
+        'statusCode': 200,
+        'body': json.dumps(data.totals)
+    }
