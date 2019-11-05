@@ -1,1 +1,3 @@
+urllib3==1.24.0
+myfitnesspal
 boto3-python3
