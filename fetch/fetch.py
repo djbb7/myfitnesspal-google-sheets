@@ -1,6 +1,7 @@
 import myfitnesspal
 import boto3
 import json
+import os
 from datetime import date, timedelta
 
 def lambda_handler(event, context):
