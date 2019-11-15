@@ -1,6 +1,6 @@
 import gspread
 import os
-import datetime
+from datetime import date, timedelta
 import json
 from oauth2client.service_account import ServiceAccountCredentials
 
@@ -24,8 +24,8 @@ def lambda_handler(event, context):
         row += 1
 
     cells = sheet.range('A'+str(row)+':K'+str(row))
-    cells[0].value = str(datetime.date.today())
-    #cells[2].value = weight
+    cells[0].value = str(date.today() - timedelta(1))
+    cells[2].value = cells[2].value.replace('\'','')
     #cells[3].value = bodyfat
     cells[4].value = event['calories']
     cells[5].value = event['protein']
